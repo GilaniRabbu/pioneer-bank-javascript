@@ -11,23 +11,22 @@ logBtn.addEventListener("click", () => {
 const Deposit = document.getElementById("deposit");
 Deposit.addEventListener("click", () => {
     const DepositNumber = getInputNumber("add-amount");
+    updateSpan("current-deposit", DepositNumber);
+    updateSpan("current-balance", DepositNumber);
+    document.getElementById("add-amount").value = "";
 
     // const currentDeposit = document.getElementById("current-deposit").innerText;
     // const currentDepositNum = parseFloat(currentDeposit);
     // const totalDeposit = DepositNumber + currentDepositNum;
     // document.getElementById("current-deposit").innerText = totalDeposit;
-
-    updateSpan("current-deposit", DepositNumber);
-    updateSpan("current-balance", DepositNumber);
-
-    document.getElementById("add-amount").value = "";
 });
 
-// current-withdraw
 const Withdraw = document.getElementById("withdraw");
 Withdraw.addEventListener("click", () => {
     const WithdrawNumber = getInputNumber("withdraw-amount");
-    console.log(WithdrawNumber);
+    updateSpan("current-withdraw", WithdrawNumber);
+    updateSpan("current-balance", -1 * WithdrawNumber);
+    document.getElementById("withdraw-amount").value = "";
 });
 
 function getInputNumber(input) {

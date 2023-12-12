@@ -1,3 +1,7 @@
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
 #transaction-area {
     display: none;
 }
@@ -16,14 +20,14 @@
 
 .status {
     color: white;
-    margin: 0 10px;
+    margin: 10px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .submit-area {
-    margin: 0 10px;
+    margin: 10px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid gray;
 }
